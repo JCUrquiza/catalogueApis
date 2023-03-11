@@ -1,0 +1,23 @@
+<p>rick-morthy works!</p>
+
+
+<div *ngIf=mostrarPersonajes>
+    <app-characters></app-characters>
+</div>
+<div *ngIf=mostrarLocaciones>
+    <app-chapters></app-chapters>
+</div>
+<div *ngIf=mostrarCapitulos>
+    <app-locations></app-locations>
+</div>
+
+
+
+<p-dock [model]="dockItems" position="bottom">
+    <ng-template pTemplate="item" let-item>
+        <img [src]="item.icon" [alt]="item.label" width="100%" style="border-radius: 50%;" >
+    </ng-template>
+</p-dock>
+
+
+
