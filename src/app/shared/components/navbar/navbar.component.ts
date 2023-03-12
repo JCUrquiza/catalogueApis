@@ -32,7 +32,7 @@ export class NavbarComponent {
         icon: 'pi pi-fw pi-book',
         items: [
           {label: 'Home', icon: 'pi pi-fw pi-home', routerLink: 'home'},
-          {label: 'Pokemon', icon: 'pi pi-fw pi-circle', routerLink: 'pokemon'},
+          {label: 'Pokemon', icon: 'pi pi-fw pi-circle', routerLink: 'pokemons'},
           {label: 'Rick & Morthy', icon: 'pi pi-fw pi-user', routerLink: 'rickMorthy'},
 
           {label: 'Star Wars', icon: 'pi pi-fw pi-star', routerLink: 'starWars'},

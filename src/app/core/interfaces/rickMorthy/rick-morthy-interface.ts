@@ -1,4 +1,4 @@
-export interface PokemonListResponse {
+export interface RickMorthyResponse {
     info:    Info;
     results: Characters[];
 }

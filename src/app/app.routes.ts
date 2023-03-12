@@ -4,13 +4,15 @@ import { DogsComponent } from './utils/dogs/dogs.component';
 import { DragonBallComponent } from './utils/dragon-ball/dragon-ball.component';
 import { HomeComponent } from './utils/home/home.component';
 import { NasaComponent } from './utils/nasa/nasa.component';
-import { PokemonComponent } from './utils/pokemon/pokemon.component';
+import { PokemonDetailsComponent } from './utils/pokemon/pokemon-details/pokemon-details.component';
+import { PokemonComponent } from './utils/pokemon/pokemons/pokemon.component';
 import { RickMorthyComponent } from './utils/rick-morthy/options/rick-morthy.component';
 import { StarWarsComponent } from './utils/star-wars/star-wars.component';
 
 const APP_ROUTES: Routes = [
     { path: 'home', component: HomeComponent },
-    { path: 'pokemon', component: PokemonComponent },
+    { path: 'pokemons', component: PokemonComponent },
+    { path: 'pokemon/:id', component: PokemonDetailsComponent },
     { path: 'rickMorthy', component: RickMorthyComponent },
 
     { path: 'starWars', component: StarWarsComponent },

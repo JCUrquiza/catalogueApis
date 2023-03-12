@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Characters, PokemonListResponse } from 'src/app/core/interfaces/rick-morthy';
+import { Characters, RickMorthyResponse } from 'src/app/core/interfaces/rickMorthy/rick-morthy-interface';
 import { RickMorthyService } from 'src/app/core/services/rickMorthy/rick-morthy.service';
 
 @Component({
@@ -13,7 +13,7 @@ export class CharactersComponent {
 
   constructor(private rickMorthy: RickMorthyService) {
 
-    this.rickMorthy.servicioPersonajes().subscribe( (data: PokemonListResponse) => {
+    this.rickMorthy.servicioPersonajes().subscribe( (data: RickMorthyResponse) => {
       console.log(data);
       this.personajes = data.results;
       console.log(this.personajes);

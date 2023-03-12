@@ -1,0 +1,31 @@
+<h1 style="text-align: center;">Listado de pokemones</h1>
+<hr style="margin-bottom: 20px;">
+
+<!-- SKeleton -->
+<div class="card-container" *ngIf="boolCardPokemonCarga">
+    <div class="card-wrapper" *ngFor="let skeleton of arraySkeleton">
+        <div style="margin-bottom: 20px;">
+            <p-skeleton width="160px" height="300px"></p-skeleton>
+        </div>
+    </div>
+</div>
+<!-- SKeleton -->
+
+
+<div class="card-container" *ngIf="!boolCardPokemonCarga">
+    <div class="card-wrapper" *ngFor="let pokemon of arrayPokemones">
+
+        <!-- Pokemons -->
+        <p-card [subheader]='pokemon.name' [style]="{'width': '10rem', 'margin-bottom': '2em'}">
+            <ng-template pTemplate="header">
+                <img style="height: 150px; width: 140px; max-height: 250px;" alt="Card" [src]="pokemon.url">
+            </ng-template>
+            <ng-template pTemplate="footer">
+                <p-button label="Detalles" icon="pi pi-check" (click)="irADetallesPokemon(pokemon.id)"></p-button>
+            </ng-template>
+        </p-card>
+        <!-- Pokemons -->
+        
+    </div>
+</div>
+

@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { PokemonListResponse } from '../../interfaces/rick-morthy';
+import { RickMorthyResponse } from '../../interfaces/rickMorthy/rick-morthy-interface';
 
 @Injectable({
   providedIn: 'root'
@@ -10,9 +10,9 @@ export class RickMorthyService {
 
   constructor(  private http: HttpClient ) { }
 
-  servicioPersonajes(): Observable<PokemonListResponse> {
+  servicioPersonajes(): Observable<RickMorthyResponse> {
     return this.http
-      .get<PokemonListResponse>('https://rickandmortyapi.com/api/character');
+      .get<RickMorthyResponse>('https://rickandmortyapi.com/api/character');
   }
 
   servicioLocaciones() {

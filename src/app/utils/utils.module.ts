@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 
 // Pages
 import { HomeComponent } from './home/home.component';
-import { PokemonComponent } from './pokemon/pokemon.component';
+import { PokemonComponent } from './pokemon/pokemons/pokemon.component';
 import { RickMorthyComponent } from './rick-morthy/options/rick-morthy.component';
 import { CharactersComponent } from './rick-morthy/characters/characters.component';
 import { LocationsComponent } from './rick-morthy/locations/locations.component';
@@ -18,13 +18,22 @@ import { NasaComponent } from './nasa/nasa.component';
 import { ButtonModule } from 'primeng/button';
 import { DockModule } from 'primeng/dock';
 import { TableModule } from 'primeng/table';
+import { CardModule } from 'primeng/card';
+import { SkeletonModule } from 'primeng/skeleton';
 
-const COMPONENTS = [HomeComponent, PokemonComponent, RickMorthyComponent];
+const COMPONENTS = [
+  HomeComponent, PokemonComponent, 
+  RickMorthyComponent, CharactersComponent, 
+  LocationsComponent, ChaptersComponent, 
+  StarWarsComponent, DogsComponent, 
+  BooksComponent, DragonBallComponent, 
+  NasaComponent
+];
 
 @NgModule({
-  declarations: [COMPONENTS, CharactersComponent, LocationsComponent, ChaptersComponent, StarWarsComponent, DogsComponent, BooksComponent, DragonBallComponent, NasaComponent],
+  declarations: [COMPONENTS],
   exports: [COMPONENTS],
-  imports: [CommonModule, ButtonModule, DockModule, TableModule]
+  imports: [CommonModule, ButtonModule, DockModule, TableModule, CardModule, SkeletonModule]
 })
 
 export class UtilsModule { }
